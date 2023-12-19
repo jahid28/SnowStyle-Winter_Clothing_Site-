@@ -2,8 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import home from './routes/home'
-import contact from './routes/contact'
+import Home from './routes/home'
+import Contact from './routes/contact'
+import Navbar from './components/navbar'
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,10 +16,11 @@ function App() {
 
   return (
     <>
+    <Navbar></Navbar>
       <Routes>
 
-<Route path='/' element={<Note />} />
-<Route path='/about' element={<About />} />
+<Route path='/' element={<Home />} />
+<Route path='/contact' element={<Contact />} />
 {/* <Route path='/blog' element={<Blog />} /> */}
 </Routes>
     </>
