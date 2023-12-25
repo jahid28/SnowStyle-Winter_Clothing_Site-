@@ -16,7 +16,10 @@ function App() {
 
   return (
     <>
-    <Navbar></Navbar>
+    {/* <div className='fixed top-0 w-[100vw] z-[100]'> */}
+
+    <Navbar/>
+    {/* </div> */}
       <Routes>
 
 <Route path='/' element={<Home />} />

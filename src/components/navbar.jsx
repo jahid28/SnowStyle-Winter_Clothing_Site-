@@ -36,15 +36,15 @@ const navbar = () => {
 
   return (
     <div>
-      <div className="flex bg-blue-50 border-b-[1px] border-black z-[100]">
+      <div className="flex z-[100] fixed w-[100vw] ">
         <img
-          className="w-28 mt-2 ml-2 cursor-pointer"
+          className="w-28 mt-2 ml-2 cursor-pointer z-[100]"
           src="./src/assets/logo.png"
           alt=""
         />
         <div
           onClick={() => setToggle(!toggle)}
-          className="ml-auto mr-10 cursor-pointer"
+          className="ml-auto mr-10 cursor-pointer z-[100]"
         >
           <p
             style={{
@@ -72,17 +72,18 @@ const navbar = () => {
       </div>
 
       <div
-        style={{ transition: "all ease-out .5s" }}
-        className={`bg-red-700 absolute z-[0] w-[100vw] h-[100vh] ${
+        style={{ transition: "all ease-out 1s",zIndex:"99" }}
+        className={`bg-blue-200 absolute z-[0] w-[100vw] h-[100vh] grid place-content-center ${
           toggle ? "top-[0vh]" : "top-[-100vh]"
         }`}
       >
-        <ul className="flex">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+        <ul className="w-[100vw]">
+          <li className=" w-[100vw] text-center text-8xl pb-10 cursor-pointer text-white align-middle hover:bg-blue-300 transition-all duration-500">Home</li>
+          <li className=" w-[100vw] text-center text-8xl pb-10 cursor-pointer text-white align-middle hover:bg-blue-300 transition-all duration-500">About</li>
+          <li className=" w-[100vw] text-center text-8xl pb-10 cursor-pointer text-white align-middle hover:bg-blue-300 transition-all duration-500">Contact</li>
+          </ul>
       </div>
+      
     </div>
   );
 };
